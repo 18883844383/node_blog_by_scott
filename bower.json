@@ -1,0 +1,22 @@
+{
+  "name": "node_blog_by_scott",
+  "description": "慕课网scott 老师教学视频学习",
+  "main": "app.js",
+  "authors": [
+    "calmound"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

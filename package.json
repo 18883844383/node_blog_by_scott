@@ -1,0 +1,23 @@
+{
+  "name": "node_blog_by_scott",
+  "version": "1.0.0",
+  "description": "慕课网scott 老师教学视频学习",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calmound/node_blog_by_scott.git"
+  },
+  "author": "calmound",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calmound/node_blog_by_scott/issues"
+  },
+  "homepage": "https://github.com/calmound/node_blog_by_scott#readme",
+  "dependencies": {
+    "mongoose": "^4.5.7"
+  },
+  "devDependencies": {}
+}

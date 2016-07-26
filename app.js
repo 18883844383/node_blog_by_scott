@@ -10,7 +10,7 @@ var app = express();
 
 mongoose.connect('mongodb://localhost/test_db2');//链接数据库
 
-app.use(express.static(path.join(__dirname,'bower_components')));
+app.use(express.static(path.join(__dirname,'public')));
 app.set('views',path.join(__dirname,'views/pages'));//渲染的index地址
 app.set('view engine','jade');//模板引擎
 app.use(bodyParser.urlencoded({extended:true}));
@@ -120,3 +120,17 @@ app.get('/admin/list',function(req,res){
 		
 	})
 });
+
+
+app.delete('/admin/list',function(req,res){
+	var id = req.query.id;
+	if(id){
+		Movie.remove({_id:id},function(err,movie){
+			if(err){
+				console.log(err);
+			}else{
+				res.json({success:1})
+			}
+		})
+	}
+})

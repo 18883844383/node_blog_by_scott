@@ -40,7 +40,8 @@ app.get('/movie/:id',function(req,res){
 	
 	Movie.findById(id,function(err,movie){
 		res.render('detail',{
-			title:'imooc' + movie.title
+			title:'imooc' + movie.title,
+			movie:movie
 		});
 	});
 });

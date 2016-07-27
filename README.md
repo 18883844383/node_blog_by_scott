@@ -26,9 +26,11 @@ bower 安装浏览器的各种插件类库  配置  .bowerrc文件，可以设�
 3.req.body 处理post请求体 json
 优先级  req.pramse->req.body->req.query
 
-## 连接mongogb数据库
-1.先打开mongodb数据库
-2.在app.js中进行连接 mongoose.connect('mongodb://localhost/test_db2');
+## mongodb分析
+### 连接mongodb数据库
+1. 先打开mongodb数据库
+2. 在app.js中进行连接 mongoose.connect('mongodb://localhost/test_db2');
+3. 样例 
 ```
 //连接数据库
 var mongoose = require('mongoose');

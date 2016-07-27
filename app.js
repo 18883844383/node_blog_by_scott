@@ -69,6 +69,7 @@ app.get('/admin/update/:id',function(req,res){
 		Movie.findById(id,function(err,movie){
 			res.render('admin',{
 				title:'imooc 后台更新页',
+				movie:movie
 			})
 		})
 	}
@@ -78,9 +79,8 @@ app.post('/admin/movie/new',function(req,res){
 	var id = req.body.movie._id; 
 	var movieObj = req.body.movie;
 	var _movie;
-console.log(id);	
+
 	if(id !== 'undefined'){//该电影已经存储过,这里加分号
-		console.log(123);
 		Movie.findById(id,function(err,movie){
 			if(err){
 				console.log(err);
@@ -102,7 +102,8 @@ console.log(id);
 			country:movieObj.country,
 			language:movieObj.language,
 			year:movieObj.year,
-			poster:movieObj.summary,
+			poster:movieObj.poster,
+			summary:movieObj.summary
 		});
 		
 		_movie.save(function(err,movie){
@@ -115,15 +116,19 @@ console.log(id);
 })
 
 
-app.get('/admin/list',function(req,res){
-	res.render('list',{
-		title:'imooc list',
-		
+app.get('/admin/list',function(req,res){ console.log(123);
+	Movie.find({},function(err,movies){
+		if(err) console.log(err);
+		res.render('list',{
+			title:'imooc list',
+			movies:movies
+		});
 	})
+	
 });
 
 
-app.delete('/admin/list',function(req,res){
+app.delete('/admin/list',function(req,res){ console.log(1);
 	var id = req.query.id;
 	if(id){
 		Movie.remove({_id:id},function(err,movie){

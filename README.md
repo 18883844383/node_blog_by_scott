@@ -63,7 +63,7 @@ post.save(function(err,post){
 
 ```
 
-常用命名
+### 常用命名
 1.  ./mongo 连接到mongodb服务器
 2.  use dbName 选择用哪个数据库
 3.  show dbs 展示所有数据库

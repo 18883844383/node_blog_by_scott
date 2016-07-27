@@ -21,9 +21,9 @@ bower 安装浏览器的各种插件类库  配置  .bowerrc文件，可以设�
 - app.set('view engine','jade');//模板引擎
 
 ## 获取路径的方式
-1.req.query 处理get
-2.req.params 处理/:xxx的get或post请求
-3.req.body 处理post请求体 json
+1. req.query 处理get
+2. req.params 处理/:xxx的get或post请求
+3. req.body 处理post请求体 json
 优先级  req.pramse->req.body->req.query
 
 ## mongodb分析
